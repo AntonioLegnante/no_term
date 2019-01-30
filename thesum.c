@@ -3,7 +3,7 @@
 
 int main () 
 {
-    int valore,somma;
+    int valore = 0,somma = 0;
     FILE *file;
     
     printf("inserisci un valore intero");
@@ -12,13 +12,13 @@ int main ()
     file = fopen("file", "r");
     if (!file) 
         printf("file inesistente: creazione in corso");
+
     else 
-    {
         fscanf(file, "%d", &somma);
-        somma += valore;
-    }
     
     fclose(file);
+
+    somma = somma + valore;
 
     file = fopen("file", "w");
     fprintf(file, "%d", somma);
