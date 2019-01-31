@@ -14,9 +14,10 @@ int main ()
         printf("file inesistente: creazione in corso");
 
     else 
+    {
         fscanf(file, "%d", &somma);
-    
-    fclose(file);
+        fclose(file);
+    }
 
     somma = somma + valore;
 
